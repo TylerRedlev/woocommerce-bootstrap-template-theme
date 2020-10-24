@@ -15,4 +15,14 @@ function simple_bootstrap_theme_load_scripts(){
 
 add_action("wp_enqueue_scripts", "simple_bootstrap_theme_load_scripts");
 
+function simple_bootstrap_theme_nav_config(){
+
+    register_nav_menus(array(
+        "sbt_primary_menu_id" => "SBT Primary Menu (Top Menu)",
+        "sbt_secondary_menu_id" => "SBT Sidebar"
+    ));
+}
+
+add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
+
 ?>
