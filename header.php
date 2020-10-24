@@ -11,10 +11,12 @@
     <title><?php echo bloginfo("title")?></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
 
     <!-- Custom styles for this template -->
-    <link href="css/blog-home.css" rel="stylesheet">
+
+
+    <?php wp_head();?>
 
 </head>
 
