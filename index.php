@@ -1,5 +1,5 @@
 
-
+<?php get_header();?>
     <!-- Page Content -->
     <div class="container">
 
@@ -140,3 +140,4 @@
     </div>
     <!-- /.container -->
 
+    <?php get_footer();?>
