@@ -21,6 +21,9 @@ function simple_bootstrap_theme_nav_config(){
         "sbt_primary_menu_id" => "SBT Primary Menu (Top Menu)",
         "sbt_secondary_menu_id" => "SBT Sidebar"
     ));
+
+    // add theme support
+    add_theme_support("post-thumbnails");
 }
 
 add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
