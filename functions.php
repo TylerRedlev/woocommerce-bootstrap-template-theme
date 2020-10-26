@@ -25,4 +25,24 @@ function simple_bootstrap_theme_nav_config(){
 
 add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
 
+
+// adding classes to li 
+
+function simple_bootstrap_theme_add_li_class($classes, $item, $args){
+    $classes[] = "nav-item sbt-theme";
+    return $classes;
+
+}
+
+add_filter("nav_menu_css_class", "simple_bootstrap_theme_add_li_class", 1, 3);
+
+// adding classes to anchor links
+
+function simple_bootstrap_theme_add_anchor_links($classes, $item, $args){
+    $classes["class"] = "nav-link sbt-link-class";
+    return $classes;
+}
+
+add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links", 1, 3)
+
 ?>
