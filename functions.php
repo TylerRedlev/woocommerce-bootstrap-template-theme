@@ -24,6 +24,8 @@ function simple_bootstrap_theme_nav_config(){
 
     // add theme support
     add_theme_support("post-thumbnails");
+
+    add_theme_support("woocommerce");
 }
 
 add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
