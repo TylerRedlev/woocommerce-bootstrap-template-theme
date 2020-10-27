@@ -7,6 +7,33 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
 
+
+    
+
+
+        <?php
+        if(is_home()){
+            echo "<h1>This is home page.</h1>";
+        }
+
+        if(is_front_page()){
+            echo "<h1>This is Front page.</h1>";
+        }
+
+        if(is_404()){
+            echo "<h1>This is 404 page.</h1>";
+        }
+
+        if(is_page()){
+            echo "<h1>This is a page template.</h1>";
+        }
+
+        if(is_single()){
+            echo "<h1>This is a single post template.</h1>";
+        }
+        
+        ?>
+
             <h1 class="my-4">Page Heading
                 <small>Secondary Text</small>
             </h1>
