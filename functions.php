@@ -1,5 +1,7 @@
 <?php
 
+// Load Scripts Function
+
 function simple_bootstrap_theme_load_scripts(){
 
     // css files
@@ -13,18 +15,23 @@ function simple_bootstrap_theme_load_scripts(){
     wp_enqueue_script("bootstrap", get_template_directory_uri()."/assets/vendor/bootstrap/js/bootstrap.bundle.min.js", array("jquery"), "1.0", true);
 }
 
+//Adding styles and scripts with action
 add_action("wp_enqueue_scripts", "simple_bootstrap_theme_load_scripts");
 
+
+//Registering navbars and configuring navigation
 function simple_bootstrap_theme_nav_config(){
 
+    //registering the nav menus
     register_nav_menus(array(
         "sbt_primary_menu_id" => "SBT Primary Menu (Top Menu)",
         "sbt_secondary_menu_id" => "SBT Sidebar"
     ));
 
-    // add theme support
+    // add theme support for thumbnails
     add_theme_support("post-thumbnails");
 
+    //Add WooCommerce theme support
     add_theme_support("woocommerce", array(
         "thumbnail_image_width" => 150,
         "single_image_width" => 200,
@@ -33,7 +40,7 @@ function simple_bootstrap_theme_nav_config(){
         )
     ));
 }
-
+//Add nav reg'strat'ons and theme support
 add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
 
 
