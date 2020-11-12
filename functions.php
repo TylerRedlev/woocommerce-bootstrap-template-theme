@@ -64,6 +64,8 @@ function simple_bootstrap_theme_add_anchor_links($classes, $item, $args){
     return $classes;
 }
 
-add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links", 1, 3)
+add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links", 1, 3);
+
+remove_action( "woocommerce_sidebar", "woocommerce_get_sidebar");
 
 ?>
