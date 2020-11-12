@@ -68,4 +68,14 @@ add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links"
 
 remove_action( "woocommerce_sidebar", "woocommerce_get_sidebar");
 
+// add container & row class
+
+function add_container_row_div_classes{
+
+}
+
+add_action("woocommerce_before_main_content", "add_container_row_div_classes", 5);
+
+
+
 ?>
