@@ -19,9 +19,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 ?>
-<div class="container owt-container">
-	<div class="row owt-row">
-			<div class="col-sm-8">
 			
 			<?php
 			/**
@@ -101,11 +98,11 @@ get_header( 'shop' );
 			 */
 			do_action( 'woocommerce_after_main_content' );
 			?>
-			</div>
+		
 	
 
 
-			<div class="col-sm-4">
+			
 			<?php
 			/**
 			* Hook: woocommerce_sidebar.
@@ -115,9 +112,7 @@ get_header( 'shop' );
 			do_action( 'woocommerce_sidebar' );
 
 			?>
-			</div>
-			</div>
-</div>
+
 
 <?php
 
