@@ -68,6 +68,21 @@ add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links"
 
 remove_action( "woocommerce_sidebar", "woocommerce_get_sidebar");
 
+
+
+
+// template layout if clicked on a product item (redirecting the template to another such as a single product)
+
+function load_template_layout(){
+
+    if(is_shop()){ // True
+        
+
+    }
+}
+
+add_action("template_redirect", "load_template_layout");
+
 // add container & row class
 
 function open_container_row_div_classes(){
@@ -134,16 +149,17 @@ function close_product_column_grid(){
 add_action("woocommerce_before_main_content", "close_product_column_grid", 10);
 
 
-// template layout if clicked on a product item (redirecting the template to another such as a single product)
+//remove shop page title heading
 
-function load_template_layout(){
+add_filter("woocommerce_show_page_title", "toggle_page_title");
 
-    if(is_shop()){ // True
-        
-
-    }
+function toggle_page_title($val){
+    $val = false;
+    return $val;
 }
 
+//Add excerpt under shop product items title
 
+add_action("woocommerce_after_shop_loop_item_title", "the_excerpt")
 
 ?>
