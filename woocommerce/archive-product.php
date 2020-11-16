@@ -46,7 +46,6 @@ get_header( 'shop' );
 				do_action( 'woocommerce_archive_description' );
 				?>
 			</header>
-			<h1>Here I am</h1>
 			<?php
 			if ( woocommerce_product_loop() ) {
 			
