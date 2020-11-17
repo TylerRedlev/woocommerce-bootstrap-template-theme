@@ -68,7 +68,10 @@ add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links"
 
 
 
-// adding woocommerce modifications functions from another file
-include_once 'include/wc-modifications.php'
+// Conditional to make sure that Woocommerce functions run only when Woocommerce plugin is activated
+if(class_exists("Woocommerce")){
 
-?>
+    // adding woocommerce modifications functions from another file
+include_once 'include/wc-modifications.php';
+
+}
