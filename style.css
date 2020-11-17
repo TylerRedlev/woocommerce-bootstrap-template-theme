@@ -6,3 +6,24 @@ Author URI: https://www.youtube.com/channel/UCB2flCo-gW6RhpVVXySqcMg
 Description: This is a very basic bootstrap theme, used for testing purposes and theme development practicesin first place.
 Version: 1.0
 */
+
+/* Single product page */
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+ background-color:black;
+ color:#fff;
+ -webkit-font-smoothing:antialiased
+}
+
+/* products page */
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    background: #343a40;
+    color: #fff;
+    font-size: 15px;
+}
+
+.price {
+    text-align: center;
+}
