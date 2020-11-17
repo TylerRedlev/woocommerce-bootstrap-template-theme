@@ -42,6 +42,11 @@ function simple_bootstrap_theme_nav_config(){
             
         )
     ));
+
+    // product thumbnail effect support
+    add_theme_support( "wc-product-gallery-zoom");
+    add_theme_support( "wc-product-gallery-lightbox");
+    add_theme_support( "wc-product-gallery-slider");
 }
 //Add nav reg'strat'ons and theme support
 add_action("after_setup_theme", "simple_bootstrap_theme_nav_config");
