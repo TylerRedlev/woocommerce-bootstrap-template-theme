@@ -18,7 +18,31 @@ remove_action( "woocommerce_sidebar", "woocommerce_get_sidebar");
 function load_template_layout(){
 
     if(is_shop()){ // True
-        
+
+        // ** open sidebar column grid **
+        // <div class="col-sm-4"> Sidebar</div>
+
+        function open_sidebar_column_grid() {
+
+            echo "<div class='col-sm-4'>";
+
+        }
+
+        add_action("woocommerce_before_main_content", "open_sidebar_column_grid", 6);
+
+
+        //Readding the sidebar after opening sidebar with our own div class
+
+        add_action("woocommerce_before_main_content", "woocommerce_get_sidebar", 7);
+
+
+        // close sidebar column grid
+
+        function close_sidebar_column_grid(){
+            echo "</div>";
+        }
+
+        add_action("woocommerce_before_main_content", "close_sidebar_column_grid", 8);
 
     }
 }
@@ -48,29 +72,9 @@ add_action("woocommerce_after_main_content", "close_container_row_div_classes", 
 
 
 
-// ** open sidebar column grid **
-// <div class="col-sm-4"> Sidebar</div>
-
-function open_sidebar_column_grid() {
-
-    echo "<div class='col-sm-4'>";
-
-}
-
-add_action("woocommerce_before_main_content", "open_sidebar_column_grid", 6);
 
 
-//Readding the sidebar after opening sidebar with our own div class
 
-add_action("woocommerce_before_main_content", "woocommerce_get_sidebar", 7);
-
-// close sidebar column grid
-
-function close_sidebar_column_grid(){
-    echo "</div>";
-}
-
-add_action("woocommerce_before_main_content", "close_sidebar_column_grid", 8);
 
 
 // Adding the products grid into the div class
