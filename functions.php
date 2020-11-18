@@ -77,6 +77,6 @@ add_filter("nav_menu_link_attributes", "simple_bootstrap_theme_add_anchor_links"
 if(class_exists("Woocommerce")){
 
     // adding woocommerce modifications functions from another file
-include_once 'include/wc-modifications.php';
+    include_once 'include/wc-modifications.php';
 
 }
