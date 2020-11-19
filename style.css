@@ -27,3 +27,22 @@ Version: 1.0
 .price {
     text-align: center;
 }
+
+
+/* Checkout Page */
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.woocommerce .form-row {
+    display: block;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+    float: right;
+    width: 48%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
