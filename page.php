@@ -26,10 +26,10 @@ $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID), "thumbnail");
             <!-- Blog Post -->
             <div class="card mb-4">
                 <img class="card-img-top" src="<?php echo $url   ?>" alt="Card image cap">
-                <div class="card-body">
+                <article>
                     <h2 class="card-title"><?php the_title();?></h2>
                     <p class="card-text"><?php the_content();?></p>
-                </div>
+                </article>
                 <!-- <div class="card-footer text-muted">
                     Posted on January 1, 2020 by
                     <a href="#">Start Bootstrap</a>
